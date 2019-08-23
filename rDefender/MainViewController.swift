@@ -72,6 +72,7 @@ class MainViewController: UIViewController {
             guestType = .truck
         }
         
+        
         performSegue(withIdentifier: "guest", sender: self)
     }
     
