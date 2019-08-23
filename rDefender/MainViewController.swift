@@ -71,6 +71,7 @@ class MainViewController: UIViewController {
         if sender.tag == 3 {
             guestType = .truck
         }
+        
         performSegue(withIdentifier: "guest", sender: self)
     }
     
