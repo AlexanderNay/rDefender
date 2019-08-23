@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="rDefender" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rasskasovo_label" translatesAutoresizingMaskIntoConstraints="NO" id="0JY-5l-xsB">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="KFV-Uk-gko"/>
+                                    <constraint firstAttribute="height" constant="150" id="kOW-Bo-ZzS"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ayt-As-jfK">
+                                <rect key="frame" x="208" y="44" width="198" height="80"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="DR8-3V-LMI">
+                                        <rect key="frame" x="0.0" y="0.0" width="198" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дом:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pme-5K-uAv">
+                                                <rect key="frame" x="0.0" y="0.0" width="127.5" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <color key="textColor" red="0.51764705882352935" green="0.40000000000000002" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aq5-bh-cLG">
+                                                <rect key="frame" x="127.5" y="0.0" width="70.5" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <color key="textColor" red="0.51764705879999995" green="0.40000000000000002" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="2eI-Vw-IVY">
+                                        <rect key="frame" x="0.0" y="40" width="198" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Квартира:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SK-cz-80O">
+                                                <rect key="frame" x="0.0" y="0.0" width="141" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <color key="textColor" red="0.51764705879999995" green="0.40000000000000002" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfg-ZS-bqU">
+                                                <rect key="frame" x="141" y="0.0" width="57" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <color key="textColor" red="0.51764705879999995" green="0.40000000000000002" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="VHE-PJ-08w"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Va-bi-bPN">
+                                <rect key="frame" x="0.0" y="150" width="414" height="1"/>
+                                <color key="backgroundColor" red="0.51764705882352935" green="0.40000000000000002" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="AaH-jQ-b4K"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выписать пропуск" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGd-Ux-Lzd">
+                                <rect key="frame" x="58" y="183" width="298.5" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.51764705879999995" green="0.40000000000000002" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="FX3-Bs-Agm">
+                                <rect key="frame" x="16" y="258" width="382" height="268"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwL-eF-N1V">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="68"/>
+                                        <color key="backgroundColor" red="0.51764705882352935" green="0.40000000000000002" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="68" id="E2C-vW-JCD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <state key="normal" title="Гость">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i33-ON-Eiz">
+                                        <rect key="frame" x="0.0" y="100" width="382" height="68"/>
+                                        <color key="backgroundColor" red="0.51764705879999995" green="0.40000000000000002" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="68" id="hIQ-lP-NcK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <state key="normal" title="Легковой автмобиль">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Auq-yZ-Hn6">
+                                        <rect key="frame" x="0.0" y="200" width="382" height="68"/>
+                                        <color key="backgroundColor" red="0.51764705879999995" green="0.40000000000000002" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="68" id="V9t-B2-u5d"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <state key="normal" title="Грузовой автомобиль">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZ2-lc-A4W">
+                                <rect key="frame" x="16" y="778" width="382" height="52"/>
+                                <color key="backgroundColor" red="0.12941176470588234" green="0.6588235294117647" blue="0.019607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Tlc-fg-49U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Список гостей">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rjs-ff-t6V">
+                                <rect key="frame" x="0.0" y="745" width="414" height="1"/>
+                                <color key="backgroundColor" red="0.51764705879999995" green="0.40000000000000002" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="6s9-mo-dph"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.10196078431372549" green="0.074509803921568626" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Va-bi-bPN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="49k-Tr-MNc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FX3-Bs-Agm" secondAttribute="trailing" constant="16" id="DvE-qs-Y4H"/>
+                            <constraint firstItem="aGd-Ux-Lzd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LK4-Nu-7Jd"/>
+                            <constraint firstItem="0JY-5l-xsB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MJM-kS-Ka3"/>
+                            <constraint firstItem="kZ2-lc-A4W" firstAttribute="top" secondItem="Rjs-ff-t6V" secondAttribute="bottom" constant="32" id="Ofv-c1-uWF"/>
+                            <constraint firstItem="aGd-Ux-Lzd" firstAttribute="top" secondItem="6Va-bi-bPN" secondAttribute="bottom" constant="32" id="PGj-f9-LwZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kZ2-lc-A4W" secondAttribute="trailing" constant="16" id="Q16-mG-T0V"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Va-bi-bPN" secondAttribute="trailing" id="QLO-zP-aVE"/>
+                            <constraint firstItem="FX3-Bs-Agm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="QM3-hr-1rb"/>
+                            <constraint firstItem="6Va-bi-bPN" firstAttribute="top" secondItem="0JY-5l-xsB" secondAttribute="bottom" id="RcC-cz-hXp"/>
+                            <constraint firstItem="Ayt-As-jfK" firstAttribute="leading" secondItem="0JY-5l-xsB" secondAttribute="trailing" constant="8" id="SiU-cU-lry"/>
+                            <constraint firstItem="kZ2-lc-A4W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YaW-hz-ASQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rjs-ff-t6V" secondAttribute="trailing" id="Zqh-j0-cuN"/>
+                            <constraint firstItem="kZ2-lc-A4W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="bDw-ZP-NgJ"/>
+                            <constraint firstItem="FX3-Bs-Agm" firstAttribute="top" secondItem="aGd-Ux-Lzd" secondAttribute="bottom" constant="32" id="eQL-o8-CyV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kZ2-lc-A4W" secondAttribute="bottom" constant="32" id="mdH-WL-tfP"/>
+                            <constraint firstItem="Ayt-As-jfK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mfY-rp-jv4"/>
+                            <constraint firstAttribute="trailing" secondItem="Ayt-As-jfK" secondAttribute="trailing" constant="8" id="pbI-kc-1VX"/>
+                            <constraint firstItem="0JY-5l-xsB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="x43-v9-KO7"/>
+                            <constraint firstItem="Rjs-ff-t6V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xj5-oW-26A"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="carButton" destination="i33-ON-Eiz" id="dXF-5y-Nlj"/>
+                        <outlet property="guestButton" destination="bwL-eF-N1V" id="0JL-Eg-ZtS"/>
+                        <outlet property="listOfGuestButton" destination="kZ2-lc-A4W" id="pNf-0L-S1S"/>
+                        <outlet property="truckButton" destination="Auq-yZ-Hn6" id="jpt-x1-WdT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rasskasovo_label" width="251" height="157"/>
+    </resources>
+</document>
