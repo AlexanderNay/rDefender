@@ -16,6 +16,7 @@
 		B0980C87230C802200DB1998 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0980C85230C802200DB1998 /* LaunchScreen.storyboard */; };
 		B0980C92230C802200DB1998 /* rDefenderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0980C91230C802200DB1998 /* rDefenderTests.swift */; };
 		B0980C9D230C802200DB1998 /* rDefenderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0980C9C230C802200DB1998 /* rDefenderUITests.swift */; };
+		B09ABE39231040F000EE0D58 /* AddGuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09ABE38231040F000EE0D58 /* AddGuestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B0980C98230C802200DB1998 /* rDefenderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rDefenderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0980C9C230C802200DB1998 /* rDefenderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rDefenderUITests.swift; sourceTree = "<group>"; };
 		B0980C9E230C802200DB1998 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B09ABE38231040F000EE0D58 /* AddGuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGuestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				B0980C83230C802100DB1998 /* Assets.xcassets */,
 				B0980C85230C802200DB1998 /* LaunchScreen.storyboard */,
 				B0980C88230C802200DB1998 /* Info.plist */,
+				B09ABE38231040F000EE0D58 /* AddGuestViewController.swift */,
 			);
 			path = rDefender;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B065ED3C230FF5B5009891A1 /* extensionUIView.swift in Sources */,
+				B09ABE39231040F000EE0D58 /* AddGuestViewController.swift in Sources */,
 				B0980C7F230C801F00DB1998 /* MainViewController.swift in Sources */,
 				B0980C7D230C801F00DB1998 /* AppDelegate.swift in Sources */,
 				B065ED3E230FF8EC009891A1 /* extensionUIColor.swift in Sources */,

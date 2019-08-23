@@ -17,10 +17,25 @@ class MainViewController: UIViewController {
     
     @IBOutlet var listOfGuestButton: UIButton!
     
+    
+    //Properties
+    
+    var guestType: GuestType!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupUI()
+        setNavigationBar()
+        
+    }
+    
+    
+    func setNavigationBar() {
+        navigationController?.navigationBar.barStyle = .black
+        navigationController?.navigationBar.barTintColor = UIColor.mainBackground
+        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationController?.navigationBar.isTranslucent = false
     }
     
     func setupUI() {
@@ -43,6 +58,26 @@ class MainViewController: UIViewController {
         
         listOfGuestButton.layer.cornerRadius = 8
         listOfGuestButton.layer.masksToBounds = true
+    }
+    
+    
+    @IBAction func guestButtonPressed(_ sender: UIButton) {
+        if sender.tag == 1 {
+            guestType = .person
+        }
+        if sender.tag == 2 {
+            guestType = .car
+        }
+        if sender.tag == 3 {
+            guestType = .truck
+        }
+        performSegue(withIdentifier: "guest", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? AddGuestViewController {
+            vc.guestType = guestType
+        }
     }
 
 
