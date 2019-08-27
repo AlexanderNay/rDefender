@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B043BD6A2315B0D900ECF63A /* extensionUIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B043BD692315B0D900ECF63A /* extensionUIDevice.swift */; };
 		B065ED3C230FF5B5009891A1 /* extensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B065ED3B230FF5B5009891A1 /* extensionUIView.swift */; };
 		B065ED3E230FF8EC009891A1 /* extensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B065ED3D230FF8EC009891A1 /* extensionUIColor.swift */; };
 		B0980C7D230C801F00DB1998 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0980C7C230C801F00DB1998 /* AppDelegate.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B043BD692315B0D900ECF63A /* extensionUIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionUIDevice.swift; sourceTree = "<group>"; };
 		B065ED3B230FF5B5009891A1 /* extensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionUIView.swift; sourceTree = "<group>"; };
 		B065ED3D230FF8EC009891A1 /* extensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionUIColor.swift; sourceTree = "<group>"; };
 		B0980C79230C801F00DB1998 /* rDefender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rDefender.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +87,7 @@
 			children = (
 				B065ED3B230FF5B5009891A1 /* extensionUIView.swift */,
 				B065ED3D230FF8EC009891A1 /* extensionUIColor.swift */,
+				B043BD692315B0D900ECF63A /* extensionUIDevice.swift */,
 			);
 			path = Estensions;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				B065ED3C230FF5B5009891A1 /* extensionUIView.swift in Sources */,
 				B09ABE39231040F000EE0D58 /* AddGuestViewController.swift in Sources */,
 				B0980C7F230C801F00DB1998 /* MainViewController.swift in Sources */,
+				B043BD6A2315B0D900ECF63A /* extensionUIDevice.swift in Sources */,
 				B0980C7D230C801F00DB1998 /* AppDelegate.swift in Sources */,
 				B065ED3E230FF8EC009891A1 /* extensionUIColor.swift in Sources */,
 			);
