@@ -74,7 +74,7 @@
                                     <constraint firstAttribute="height" constant="80" id="VHE-PJ-08w"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выписать пропуск" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGd-Ux-Lzd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выписать пропуск" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aGd-Ux-Lzd">
                                 <rect key="frame" x="58" y="271" width="298.5" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="aan-7c-qKC"/>
@@ -197,60 +197,57 @@
                                     <constraint firstAttribute="height" constant="1" id="N6K-Hc-nAS"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя гостя:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okH-ZN-vd1">
-                                <rect key="frame" x="16" y="287" width="382" height="32"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="8ir-yU-jCb">
+                                <rect key="frame" x="16" y="271" width="382" height="284"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя гостя:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="okH-ZN-vd1">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <color key="textColor" red="0.51764705879999995" green="0.40000000000000002" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zYv-CU-TNl">
+                                        <rect key="frame" x="0.0" y="50" width="382" height="34"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Марка автомобиля:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="n4u-rJ-FyB">
+                                        <rect key="frame" x="0.0" y="100" width="231" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <color key="textColor" red="0.51764705879999995" green="0.40000000000000002" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hhe-K4-U89">
+                                        <rect key="frame" x="0.0" y="150" width="382" height="34"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Марка автомобиля:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="puJ-JB-DBP">
+                                        <rect key="frame" x="0.0" y="200" width="231" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <color key="textColor" red="0.51764705879999995" green="0.40000000000000002" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g1B-1R-zRU">
+                                        <rect key="frame" x="0.0" y="250" width="382" height="34"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="oNT-ck-uH7"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hhe-K4-U89" secondAttribute="trailing" id="3Q4-X5-5gH"/>
+                                    <constraint firstAttribute="trailing" secondItem="g1B-1R-zRU" secondAttribute="trailing" id="5yj-SW-P8Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="okH-ZN-vd1" secondAttribute="trailing" id="FLM-uZ-ups"/>
+                                    <constraint firstItem="zYv-CU-TNl" firstAttribute="leading" secondItem="8ir-yU-jCb" secondAttribute="leading" id="XcN-Zw-iVs"/>
+                                    <constraint firstAttribute="trailing" secondItem="zYv-CU-TNl" secondAttribute="trailing" id="lFz-RF-q2u"/>
+                                    <constraint firstItem="g1B-1R-zRU" firstAttribute="leading" secondItem="8ir-yU-jCb" secondAttribute="leading" id="ofm-kA-bNI"/>
+                                    <constraint firstItem="Hhe-K4-U89" firstAttribute="leading" secondItem="8ir-yU-jCb" secondAttribute="leading" id="rMV-4n-jmR"/>
+                                    <constraint firstItem="okH-ZN-vd1" firstAttribute="leading" secondItem="8ir-yU-jCb" secondAttribute="leading" id="wKL-Ap-RQ0"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <color key="textColor" red="0.51764705879999995" green="0.40000000000000002" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zYv-CU-TNl">
-                                <rect key="frame" x="16" y="335" width="330" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="eYU-cS-UUk"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Марка автомобиля:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4u-rJ-FyB">
-                                <rect key="frame" x="16" y="385" width="382" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="77n-dy-JBh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <color key="textColor" red="0.51764705879999995" green="0.40000000000000002" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hhe-K4-U89">
-                                <rect key="frame" x="16" y="433" width="330" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="zoA-MB-ocd"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Марка автомобиля:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puJ-JB-DBP">
-                                <rect key="frame" x="16" y="483" width="382" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="ivH-NT-AGI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <color key="textColor" red="0.51764705879999995" green="0.40000000000000002" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g1B-1R-zRU">
-                                <rect key="frame" x="16" y="531" width="330" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="5BK-0c-oFT"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qx9-fF-gyh">
                                 <rect key="frame" x="16" y="778" width="382" height="52"/>
                                 <color key="backgroundColor" red="0.12941176469999999" green="0.6588235294" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -324,40 +321,32 @@
                             <constraint firstItem="SrP-eM-m3h" firstAttribute="leading" secondItem="KF8-b4-Hcb" secondAttribute="leading" id="0Ov-Kq-Hkx"/>
                             <constraint firstAttribute="trailing" secondItem="SrP-eM-m3h" secondAttribute="trailing" id="0bO-yP-gSB"/>
                             <constraint firstItem="K6k-8L-2QN" firstAttribute="bottom" secondItem="qx9-fF-gyh" secondAttribute="bottom" constant="32" id="2cV-gc-Lv6"/>
-                            <constraint firstItem="K6k-8L-2QN" firstAttribute="trailing" secondItem="okH-ZN-vd1" secondAttribute="trailing" constant="16" id="4xC-Vg-oq5"/>
-                            <constraint firstItem="n4u-rJ-FyB" firstAttribute="top" secondItem="zYv-CU-TNl" secondAttribute="bottom" constant="16" id="7lO-TU-aOm"/>
-                            <constraint firstItem="g1B-1R-zRU" firstAttribute="top" secondItem="puJ-JB-DBP" secondAttribute="bottom" constant="16" id="91I-No-siZ"/>
                             <constraint firstItem="rS9-ae-fuv" firstAttribute="top" secondItem="by9-lz-gOH" secondAttribute="bottom" id="9xi-Xl-Oq6"/>
-                            <constraint firstItem="n4u-rJ-FyB" firstAttribute="leading" secondItem="K6k-8L-2QN" secondAttribute="leading" constant="16" id="An7-rT-kfy"/>
                             <constraint firstItem="nOK-CF-tS8" firstAttribute="top" secondItem="by9-lz-gOH" secondAttribute="bottom" id="DhG-K8-593"/>
-                            <constraint firstItem="puJ-JB-DBP" firstAttribute="top" secondItem="Hhe-K4-U89" secondAttribute="bottom" constant="16" id="GVT-sA-L8q"/>
                             <constraint firstItem="by9-lz-gOH" firstAttribute="leading" secondItem="K6k-8L-2QN" secondAttribute="leading" id="IQc-EP-1Ag"/>
-                            <constraint firstItem="K6k-8L-2QN" firstAttribute="trailing" secondItem="puJ-JB-DBP" secondAttribute="trailing" constant="16" id="ISi-Ih-LAS"/>
-                            <constraint firstItem="K6k-8L-2QN" firstAttribute="trailing" secondItem="Hhe-K4-U89" secondAttribute="trailing" constant="68" id="Jq5-yO-dLd"/>
-                            <constraint firstItem="g1B-1R-zRU" firstAttribute="leading" secondItem="K6k-8L-2QN" secondAttribute="leading" constant="16" id="LuJ-Pu-Xl6"/>
                             <constraint firstItem="rS9-ae-fuv" firstAttribute="leading" secondItem="K6k-8L-2QN" secondAttribute="leading" id="R7W-W5-hKI"/>
                             <constraint firstItem="K6k-8L-2QN" firstAttribute="trailing" secondItem="nOK-CF-tS8" secondAttribute="trailing" constant="8" id="S4a-Rl-0Pa"/>
-                            <constraint firstItem="okH-ZN-vd1" firstAttribute="leading" secondItem="K6k-8L-2QN" secondAttribute="leading" constant="16" id="TWE-2k-geq"/>
+                            <constraint firstItem="SrP-eM-m3h" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8ir-yU-jCb" secondAttribute="bottom" constant="16" id="T8u-E7-0Sb"/>
+                            <constraint firstItem="K6k-8L-2QN" firstAttribute="trailing" secondItem="8ir-yU-jCb" secondAttribute="trailing" constant="16" id="VbO-qg-RKw"/>
                             <constraint firstItem="nOK-CF-tS8" firstAttribute="leading" secondItem="rS9-ae-fuv" secondAttribute="trailing" constant="8" id="Y5a-GO-i0f"/>
                             <constraint firstItem="by9-lz-gOH" firstAttribute="top" secondItem="K6k-8L-2QN" secondAttribute="top" id="YeQ-xq-Ljc"/>
-                            <constraint firstItem="Hhe-K4-U89" firstAttribute="leading" secondItem="K6k-8L-2QN" secondAttribute="leading" constant="16" id="ZzO-Ta-tea"/>
+                            <constraint firstItem="8ir-yU-jCb" firstAttribute="top" secondItem="rS9-ae-fuv" secondAttribute="bottom" constant="32" id="b0F-af-FO5"/>
                             <constraint firstItem="qx9-fF-gyh" firstAttribute="top" secondItem="SrP-eM-m3h" secondAttribute="bottom" constant="32" id="bde-D5-owb"/>
                             <constraint firstItem="qx9-fF-gyh" firstAttribute="top" secondItem="SrP-eM-m3h" secondAttribute="bottom" constant="32" id="cDf-CO-bZd"/>
-                            <constraint firstItem="zYv-CU-TNl" firstAttribute="leading" secondItem="K6k-8L-2QN" secondAttribute="leading" constant="16" id="eFn-Dq-2MV"/>
+                            <constraint firstItem="8ir-yU-jCb" firstAttribute="leading" secondItem="K6k-8L-2QN" secondAttribute="leading" constant="16" id="e5q-ff-TOf"/>
                             <constraint firstItem="nOK-CF-tS8" firstAttribute="leading" secondItem="rS9-ae-fuv" secondAttribute="trailing" constant="8" id="gCm-X2-BbS"/>
                             <constraint firstItem="K6k-8L-2QN" firstAttribute="trailing" secondItem="qx9-fF-gyh" secondAttribute="trailing" constant="16" id="jUo-hd-eBK"/>
                             <constraint firstItem="K6k-8L-2QN" firstAttribute="trailing" secondItem="by9-lz-gOH" secondAttribute="trailing" id="ogb-KR-PZl"/>
                             <constraint firstItem="qx9-fF-gyh" firstAttribute="leading" secondItem="KF8-b4-Hcb" secondAttribute="leading" constant="16" id="quw-Xf-Vu9"/>
-                            <constraint firstItem="K6k-8L-2QN" firstAttribute="trailing" secondItem="g1B-1R-zRU" secondAttribute="trailing" constant="68" id="shk-i1-DXr"/>
-                            <constraint firstItem="puJ-JB-DBP" firstAttribute="leading" secondItem="K6k-8L-2QN" secondAttribute="leading" constant="16" id="tgE-Am-9my"/>
-                            <constraint firstItem="Hhe-K4-U89" firstAttribute="top" secondItem="n4u-rJ-FyB" secondAttribute="bottom" constant="16" id="uy5-Y5-GGP"/>
-                            <constraint firstItem="okH-ZN-vd1" firstAttribute="top" secondItem="rS9-ae-fuv" secondAttribute="bottom" constant="48" id="vX1-Aa-mLd"/>
-                            <constraint firstItem="K6k-8L-2QN" firstAttribute="trailing" secondItem="n4u-rJ-FyB" secondAttribute="trailing" constant="16" id="xJV-SZ-Obt"/>
-                            <constraint firstItem="zYv-CU-TNl" firstAttribute="top" secondItem="okH-ZN-vd1" secondAttribute="bottom" constant="16" id="ywf-bf-bzq"/>
-                            <constraint firstItem="K6k-8L-2QN" firstAttribute="trailing" secondItem="zYv-CU-TNl" secondAttribute="trailing" constant="68" id="zRR-51-sno"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="K6k-8L-2QN"/>
                     </view>
+                    <connections>
+                        <outlet property="guestTextFieldsStackTopConstraint" destination="b0F-af-FO5" id="cKV-HM-jGn"/>
+                        <outlet property="rasskazovoLabelHighConstraint" destination="mFu-i8-Q3Z" id="UFF-08-OSo"/>
+                        <outlet property="rasskazovoLabelWidthConstraint" destination="WJ9-86-29l" id="qqQ-RV-fbf"/>
+                        <outlet property="textFieldsStack" destination="8ir-yU-jCb" id="7kK-2C-Eol"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dwo-8u-s0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

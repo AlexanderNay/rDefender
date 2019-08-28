@@ -47,7 +47,7 @@ class MainViewController: UIViewController {
         
     }
     
-    func setConstraintsForSmallScreens() {
+    fileprivate func setConstraintsForSmallScreens() {
         
         //TODO: I don't like it
         switch UIDevice().type {
@@ -62,14 +62,14 @@ class MainViewController: UIViewController {
         
     
     
-    func setNavigationBar() {
+    fileprivate func setNavigationBar() {
         navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.barTintColor = UIColor.mainBackground
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.navigationBar.isTranslucent = false
     }
     
-    func setupUI() {
+    fileprivate func setupUI() {
         //Set background colors
         guestButton.setGradientBackground(colorTop: UIColor.lightBrown, colorBottom: UIColor.darkBrown)
         carButton.setGradientBackground(colorTop: UIColor.lightBrown, colorBottom: UIColor.darkBrown)
