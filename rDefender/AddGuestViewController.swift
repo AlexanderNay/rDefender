@@ -18,6 +18,8 @@ class AddGuestViewController: UIViewController {
     
     var guestType: GuestType!
     
+    var viewOriginYPosition: CGFloat = 0
+    
     //Constraints
     //Rasskazovo Label
     @IBOutlet weak var rasskazovoLabelHighConstraint: NSLayoutConstraint!
@@ -45,6 +47,8 @@ class AddGuestViewController: UIViewController {
         //tap.cancelsTouchesInView = false
         
         view.addGestureRecognizer(tap)
+        viewOriginYPosition = view.frame.origin.y
+        print("viewOriginPosition = ", viewOriginYPosition)
         //
         guard let guestType = guestType else { return }
         switch guestType {
@@ -99,20 +103,34 @@ extension AddGuestViewController {
     
     @objc func keyboardWillShow(notification: NSNotification) {
         print("keyboard will show")
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            print("keyboaedSize = \(keyboardSize)")
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            print("keyboaedSize = \(keyboardSize), heigh = ", keyboardSize.height)
             print("view.frame.origin = ", view.frame.origin)
-            if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height
+            print("view.frame.origin.y = \(view.frame.origin.y), viewOriginYPosirion = \(viewOriginYPosition)")
+            if self.view.frame.origin.y < 90 {
+                switch UIDevice().type {
+                case .iPhoneSE, .iPhone5, .iPhone5S:
+                    self.view.frame.origin.y -= keyboardSize.height - 135
+                case .iPhone6, .iPhone7, .iPhone8, .iPhone6S:
+                    self.view.frame.origin.y -= keyboardSize.height - 155
+                case .iPhone6Plus, .iPhone6SPlus, .iPhone7Plus, .iPhone8Plus:
+                    self.view.frame.origin.y -= keyboardSize.height - 110
+                default:
+                    self.view.frame.origin.y -= keyboardSize.height - 175
+                }
             }
         }
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
         print("keyboard will hide")
-        if self.view.frame.origin.y != 0 {
-            self.view.frame.origin.y = 0
+        switch UIDevice().type {
+        case .iPhoneSE, .iPhone5, .iPhone5S, .iPhone6, .iPhone7, .iPhone8, .iPhone6S, .iPhone6Plus, .iPhone6SPlus, .iPhone7Plus, .iPhone8Plus:
+            self.view.frame.origin.y = 64
+        default:
+            self.view.frame.origin.y = 88
         }
+
     }
     
     //Calls this function when the tap is recognized.
