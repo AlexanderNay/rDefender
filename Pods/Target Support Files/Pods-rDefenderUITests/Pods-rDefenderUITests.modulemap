@@ -1,0 +1,6 @@
+framework module Pods_rDefenderUITests {
+  umbrella header "Pods-rDefenderUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
