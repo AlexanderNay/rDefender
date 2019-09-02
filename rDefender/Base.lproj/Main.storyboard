@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WzJ-Ih-qTA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hxq-PL-1xd">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -180,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="114.50892857142857"/>
+            <point key="canvasLocation" x="799" y="115"/>
         </scene>
         <!--Add Guest View Controller-->
         <scene sceneID="kLp-1t-ttD">
@@ -350,7 +350,68 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dwo-8u-s0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1895.6521739130437" y="114.50892857142857"/>
+            <point key="canvasLocation" x="1567" y="115"/>
+        </scene>
+        <!--Auth View Controller-->
+        <scene sceneID="59E-2T-NxM">
+            <objects>
+                <viewController id="hxq-PL-1xd" customClass="AuthViewController" customModule="rDefender" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ixV-Mh-mEm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Pg-bY-oGX">
+                                <rect key="frame" x="165.5" y="144" width="83" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jYS-bo-Mkh">
+                                <rect key="frame" x="165.5" y="218" width="83" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8C-kk-EDT">
+                                <rect key="frame" x="185.5" y="292" width="43" height="30"/>
+                                <state key="normal" title="SignIn"/>
+                                <connections>
+                                    <action selector="registerButtonPressed:" destination="hxq-PL-1xd" eventType="touchUpInside" id="5A4-8b-vTu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXH-2y-YJ8">
+                                <rect key="frame" x="16" y="346" width="382" height="30"/>
+                                <state key="normal" title="Continue as UserName"/>
+                                <connections>
+                                    <action selector="continueAsUserButtonPressed:" destination="hxq-PL-1xd" eventType="touchUpInside" id="ERg-AN-CvC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jYS-bo-Mkh" firstAttribute="width" secondItem="4Pg-bY-oGX" secondAttribute="width" id="0TE-g8-lBk"/>
+                            <constraint firstItem="yXH-2y-YJ8" firstAttribute="leading" secondItem="uIb-AK-2NP" secondAttribute="leading" constant="16" id="0nT-Pp-VJY"/>
+                            <constraint firstItem="v8C-kk-EDT" firstAttribute="centerX" secondItem="ixV-Mh-mEm" secondAttribute="centerX" id="Go6-gB-csK"/>
+                            <constraint firstItem="4Pg-bY-oGX" firstAttribute="top" secondItem="uIb-AK-2NP" secondAttribute="top" constant="100" id="H1f-zK-pZg"/>
+                            <constraint firstItem="jYS-bo-Mkh" firstAttribute="centerX" secondItem="ixV-Mh-mEm" secondAttribute="centerX" id="LW1-3J-2z5"/>
+                            <constraint firstItem="jYS-bo-Mkh" firstAttribute="top" secondItem="4Pg-bY-oGX" secondAttribute="bottom" constant="44" id="bGM-6F-JVg"/>
+                            <constraint firstItem="4Pg-bY-oGX" firstAttribute="centerX" secondItem="ixV-Mh-mEm" secondAttribute="centerX" id="fxF-9f-qqP"/>
+                            <constraint firstItem="v8C-kk-EDT" firstAttribute="top" secondItem="jYS-bo-Mkh" secondAttribute="bottom" constant="44" id="pkN-V8-XiY"/>
+                            <constraint firstItem="yXH-2y-YJ8" firstAttribute="top" secondItem="v8C-kk-EDT" secondAttribute="bottom" constant="24" id="pzg-vw-Obi"/>
+                            <constraint firstItem="uIb-AK-2NP" firstAttribute="trailing" secondItem="yXH-2y-YJ8" secondAttribute="trailing" constant="16" id="zqb-a0-lQu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uIb-AK-2NP"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="4Pg-bY-oGX" id="nMC-5O-6gw"/>
+                        <outlet property="passwordTextField" destination="jYS-bo-Mkh" id="1xf-wB-G36"/>
+                        <outlet property="registerButton" destination="v8C-kk-EDT" id="JhV-rr-PG5"/>
+                        <segue destination="WzJ-Ih-qTA" kind="presentation" identifier="mainVC" id="Adf-Wh-WWB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ADg-i8-pyq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-739.13043478260875" y="114.50892857142857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Wdr-S7-QMP">
@@ -368,7 +429,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JYs-Zb-dqk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+            <point key="canvasLocation" x="26" y="115"/>
         </scene>
     </scenes>
     <resources>
