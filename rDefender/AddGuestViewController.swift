@@ -34,9 +34,16 @@ class AddGuestViewController: UIViewController {
     //Stack of Text Fields
     @IBOutlet weak var textFieldsStack: UIStackView!
     
+    //Text fields
+    @IBOutlet weak var guestNameTextField: UITextField!
+    @IBOutlet weak var carModelTextField: UITextField!
+    @IBOutlet weak var carNumberTextField: UITextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("**DEINIT: ", String(describing: self.description))
+        
         notificateKeyboardposition()
         setConstraintsForSmallScreens()
         
@@ -84,6 +91,41 @@ class AddGuestViewController: UIViewController {
         }
     }
     
+    
+    //MARK: Actions
+    
+    @IBAction func createPassButtonPressed(_ sender: UIButton) {
+        //TODO: Save informaton to DataBase from text fields
+        //TODO: Show process indictor
+        //TODO: If success - back to main screen
+        //TODO: If error - show alert
+        
+        let name = guestNameTextField.text ?? ""
+        let carModel = carModelTextField.text ?? ""
+        let carNumber = carNumberTextField.text ?? ""
+        
+        guard name != "" || (carModel != "" && carNumber != "") else {
+            
+            //TODO: Show alert
+            return
+        }
+        
+        let guest = Guest(id: "", name: name, carModel: carModel, carNumber: carNumber, date: Date())
+        
+        DBManager.shared.seveGuest(guest: guest) { (result, error) in
+            
+            guard let result = result, error == nil else {
+                
+                //TODO: Show alert
+                return
+            }
+            
+            self.dismiss(animated: true, completion: nil)
+        }
+ 
+    }
+    
+    
 
     /*
     // MARK: - Navigation
@@ -94,6 +136,10 @@ class AddGuestViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    deinit {
+        print("**DEINIT: ", String(describing: self.description))
+    }
 
 }
 
@@ -138,6 +184,7 @@ extension AddGuestViewController {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
+    
 }
 
 

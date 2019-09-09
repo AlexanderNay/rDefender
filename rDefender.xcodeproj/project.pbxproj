@@ -12,9 +12,11 @@
 		B043BD6A2315B0D900ECF63A /* extensionUIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B043BD692315B0D900ECF63A /* extensionUIDevice.swift */; };
 		B043BD6C2317236D00ECF63A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B043BD6B2317236D00ECF63A /* GoogleService-Info.plist */; };
 		B043BD6E2317E10400ECF63A /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B043BD6D2317E10400ECF63A /* AuthViewController.swift */; };
-		B0513FD0231BC0D70066FBC0 /* DBMandger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0513FCF231BC0D70066FBC0 /* DBMandger.swift */; };
+		B0513FD0231BC0D70066FBC0 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0513FCF231BC0D70066FBC0 /* DBManager.swift */; };
 		B0513FD2231BC2430066FBC0 /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0513FD1231BC2430066FBC0 /* Guest.swift */; };
-		B0513FD4231BEB500066FBC0 /* AuthMeneger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0513FD3231BEB500066FBC0 /* AuthMeneger.swift */; };
+		B0513FD4231BEB500066FBC0 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0513FD3231BEB500066FBC0 /* AuthManager.swift */; };
+		B0513FD6231D499B0066FBC0 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0513FD5231D499B0066FBC0 /* RegistrationViewController.swift */; };
+		B0513FD8231E6DC10066FBC0 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0513FD7231E6DC10066FBC0 /* SettingViewController.swift */; };
 		B065ED3C230FF5B5009891A1 /* extensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B065ED3B230FF5B5009891A1 /* extensionUIView.swift */; };
 		B065ED3E230FF8EC009891A1 /* extensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B065ED3D230FF8EC009891A1 /* extensionUIColor.swift */; };
 		B0980C7D230C801F00DB1998 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0980C7C230C801F00DB1998 /* AppDelegate.swift */; };
@@ -57,9 +59,11 @@
 		B043BD692315B0D900ECF63A /* extensionUIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionUIDevice.swift; sourceTree = "<group>"; };
 		B043BD6B2317236D00ECF63A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B043BD6D2317E10400ECF63A /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
-		B0513FCF231BC0D70066FBC0 /* DBMandger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBMandger.swift; sourceTree = "<group>"; };
+		B0513FCF231BC0D70066FBC0 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		B0513FD1231BC2430066FBC0 /* Guest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
-		B0513FD3231BEB500066FBC0 /* AuthMeneger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMeneger.swift; sourceTree = "<group>"; };
+		B0513FD3231BEB500066FBC0 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		B0513FD5231D499B0066FBC0 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		B0513FD7231E6DC10066FBC0 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		B065ED3B230FF5B5009891A1 /* extensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionUIView.swift; sourceTree = "<group>"; };
 		B065ED3D230FF8EC009891A1 /* extensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionUIColor.swift; sourceTree = "<group>"; };
 		B0980C79230C801F00DB1998 /* rDefender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rDefender.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,11 +158,13 @@
 			children = (
 				B065ED3A230FF57A009891A1 /* Estensions */,
 				B0980C7C230C801F00DB1998 /* AppDelegate.swift */,
-				B0513FCF231BC0D70066FBC0 /* DBMandger.swift */,
-				B0513FD3231BEB500066FBC0 /* AuthMeneger.swift */,
+				B0513FCF231BC0D70066FBC0 /* DBManager.swift */,
+				B0513FD3231BEB500066FBC0 /* AuthManager.swift */,
 				B0513FD1231BC2430066FBC0 /* Guest.swift */,
 				B043BD6D2317E10400ECF63A /* AuthViewController.swift */,
+				B0513FD5231D499B0066FBC0 /* RegistrationViewController.swift */,
 				B0980C7E230C801F00DB1998 /* MainViewController.swift */,
+				B0513FD7231E6DC10066FBC0 /* SettingViewController.swift */,
 				B09ABE38231040F000EE0D58 /* AddGuestViewController.swift */,
 				B0980C80230C801F00DB1998 /* Main.storyboard */,
 				B0980C83230C802100DB1998 /* Assets.xcassets */,
@@ -425,13 +431,15 @@
 				B065ED3C230FF5B5009891A1 /* extensionUIView.swift in Sources */,
 				B09ABE39231040F000EE0D58 /* AddGuestViewController.swift in Sources */,
 				B0513FD2231BC2430066FBC0 /* Guest.swift in Sources */,
-				B0513FD4231BEB500066FBC0 /* AuthMeneger.swift in Sources */,
+				B0513FD6231D499B0066FBC0 /* RegistrationViewController.swift in Sources */,
+				B0513FD4231BEB500066FBC0 /* AuthManager.swift in Sources */,
 				B0980C7F230C801F00DB1998 /* MainViewController.swift in Sources */,
 				B043BD6E2317E10400ECF63A /* AuthViewController.swift in Sources */,
 				B043BD6A2315B0D900ECF63A /* extensionUIDevice.swift in Sources */,
 				B0980C7D230C801F00DB1998 /* AppDelegate.swift in Sources */,
-				B0513FD0231BC0D70066FBC0 /* DBMandger.swift in Sources */,
+				B0513FD0231BC0D70066FBC0 /* DBManager.swift in Sources */,
 				B065ED3E230FF8EC009891A1 /* extensionUIColor.swift in Sources */,
+				B0513FD8231E6DC10066FBC0 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,10 +10,11 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    
+
     @IBOutlet var guestButton: UIButton!
     @IBOutlet var carButton: UIButton!
     @IBOutlet var truckButton: UIButton!
+    @IBOutlet weak var settingsButton: UIButton!
     
     @IBOutlet var listOfGuestButton: UIButton!
     
@@ -40,7 +41,9 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("**INIT: ", String(describing: self.description))
         // Do any additional setup after loading the view.
+        presentingViewController?.dismiss(animated: true, completion: nil)
         setupUI()
         setNavigationBar()
         setConstraintsForSmallScreens()
@@ -99,6 +102,12 @@ class MainViewController: UIViewController {
         truckButton.titleLabel?.adjustsFontSizeToFitWidth = true
         listOfGuestButton.titleLabel?.minimumScaleFactor = 0.5
         listOfGuestButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        
+        //Set setting button
+        let origImage = UIImage(named: "Settings_black-512")
+        let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
+        settingsButton.setImage(tintedImage, for: .normal)
+        settingsButton.tintColor = #colorLiteral(red: 0.5176470588, green: 0.4, blue: 0.1529411765, alpha: 1)
     }
     
     
@@ -118,10 +127,20 @@ class MainViewController: UIViewController {
         performSegue(withIdentifier: "guest", sender: self)
     }
     
+    
+    @IBAction func settingsButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "fromMainVCToSettingVC", sender: self)
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? AddGuestViewController {
             vc.guestType = guestType
         }
+    }
+    
+    deinit {
+        print("**DEINIT: ", String(describing: self.description))
     }
 
 

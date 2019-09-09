@@ -19,7 +19,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
-        //let db = Firestore.firestore()
+
+        
+        if (AuthManager.shared.isCurrentUserExist()){
+            
+            let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let vc = sb.instantiateViewController(withIdentifier: "mainVC")
+            
+            vc.modalTransitionStyle = .crossDissolve
+            window?.rootViewController = vc
+            window?.makeKeyAndVisible()
+        }
+        
         return true
     }
 

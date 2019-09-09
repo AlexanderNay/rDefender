@@ -12,6 +12,7 @@ import Firebase
 class AuthViewController: UIViewController {
     
     // ВАЛИДАЦИЯ ПО НОМЕРУ ТЕЛЕФОНА (только добавленные номера могут регистрироваться)
+    // Пользователь региструется по заявке
     
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -19,23 +20,23 @@ class AuthViewController: UIViewController {
     
     @IBOutlet weak var registerButton: UIButton!
     
-    var handle: AuthStateDidChangeListenerHandle!
+    var handle: AuthStateDidChangeListenerHandle! // Do I need it?
     var isCurrentUserExist: Bool = false
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("**INIT: ", String(describing: self.description))
+        isCurrentUserExist = AuthManager.shared.isCurrentUserExist()
+        presentingViewController?.dismiss(animated: false, completion: nil)
         
-        isCurrentUserExist = Auth.auth().currentUser != nil
-        print("current user: ", Auth.auth().currentUser?.email)
-
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         handle  = Auth.auth().addStateDidChangeListener { (auth, user) in
-            //
+            //code  - if user was changed (how it's gonna happen)
         }
     }
     
@@ -46,61 +47,64 @@ class AuthViewController: UIViewController {
         super.viewWillDisappear(true)
     }
     
-
+    private func setupUI() {
+        
+        if isCurrentUserExist {
+            
+        } else {
+            
+        }
+        
+    }
+    
     @IBAction func registerButtonPressed(_ sender: UIButton) {
-        registrateUser()
-        
+        //registrateUser()
+        performSegue(withIdentifier: "goToRegistration", sender: self)
     }
     
     
-    @IBAction func continueAsUserButtonPressed(_ sender: UIButton) {
-        
-        let guest = Guest(id: "", name: "John Wick", carModel: "Car", carNumber: "J.Wick", date: Date())
-        
-        DBMandger.shared.seveGuest(guest: guest) { (ref, err) in
-            if ref?.documentID != nil {
-                print("SUCCESS write document: ", ref!.documentID)
-            }
-        }
-        
-        DBMandger.shared.getGuests { (quertySnapshot, error) in
-            if error == nil {
-                print("SUCCESS get guests")
-            }
-        }
-    }
-    
-    
-    
-    
-    
-    private func registrateUser() {
-        
+    @IBAction func confirmUserButtonPressed(_ sender: UIButton) {
+       
         let userEmail = emailTextField.text ?? ""
         let password = passwordTextField.text ?? ""
         
-        Auth.auth().createUser(withEmail: userEmail, password: password) { (result, error) in
-            //
+        AuthManager.shared.confirmUser(userEmail: userEmail, password: password) { (result, error) in
             guard error == nil else {
-                print(error!)
+                //TODO: Show alert about the error here
+                
                 return
             }
-            print(result!)
-            //self.performSegue(withIdentifier: "mainVC", sender: self)
+            self.showTheMainScreen()
+        }
+    }
+    
+    private func showTheMainScreen() {
+        self.performSegue(withIdentifier: "fromAuthToMainVC", sender: self)
+    }
+    
+    private func registrateUser() {
+        
+        
+        //TODO: Handel if the fields are empry (maybe something else too)
+        let userEmail = emailTextField.text ?? ""
+        let password = passwordTextField.text ?? ""
+        
+        AuthManager.shared.registerUser(userEmail: userEmail, password: password) { (result, error) in
+            //
+            guard error == nil else {
+                //TODO: Show alert about the error here
+                
+                return
+            }
+            self.showTheMainScreen()
         }
     }
     
     private func continueWithCurrentUser() {
         
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    deinit {
+        print("**DEINIT: ", String(describing: self.description))
     }
-    */
-
 }

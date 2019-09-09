@@ -1,5 +1,5 @@
 //
-//  DBMandger.swift
+//  DBManager.swift
 //  rDefender
 //
 //  Created by AlexanderN on 01/09/2019.
@@ -9,9 +9,9 @@
 import Foundation
 import Firebase
 
-class DBMandger {
+class DBManager {
     
-    static let shared = DBMandger()
+    static let shared = DBManager()
     private let db = Firestore.firestore()
     private var ref: DocumentReference? = nil
     
@@ -62,9 +62,27 @@ class DBMandger {
         
     }
     
-    func deleteGuest() {
+    func deleteGuest(guest: Guest, completion: @escaping (Error?) -> Void) {
+        
+        guard let userId = Auth.auth().currentUser?.uid else { return }
+        
+        db.collection("users").document(userId).collection("guests").document(guest.id).delete() { error in
+            if let error = error {
+                print("Error removing document: \(error)")
+                completion(error)
+            } else {
+                print("Document successfully removed!")
+                completion(nil)
+            }
+        }
         
     }
+    
+    func getCurrentUser() -> User? {
+        return Auth.auth().currentUser
+    }
+    
+    
     
     
     private init() {}
