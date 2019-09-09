@@ -17,9 +17,9 @@ class DBManager {
     
     func seveGuest(guest: Guest, completion: @escaping (DocumentReference?, Error?) -> Void) {
         
-        guard let userId = Auth.auth().currentUser?.uid else { return }
+        guard let user = Auth.auth().currentUser else { return }
         
-        ref = db.collection("users").document(userId).collection("guests").document()
+        ref = db.collection("users").document(user.uid).collection("guests").document()
        
         guard let ref = ref else {
             print("ERROR: document == nil")
@@ -28,7 +28,7 @@ class DBManager {
         
         ref.setData([
             "id" : ref.documentID,
-            "name" : guest.name,
+            "name" : guest.name ?? "",
             "carModel" : guest.carModel ?? "",
             "carNumber" : guest.carNumber ?? ""
         ]) { error in

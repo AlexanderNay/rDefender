@@ -27,6 +27,9 @@
 		B0980C92230C802200DB1998 /* rDefenderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0980C91230C802200DB1998 /* rDefenderTests.swift */; };
 		B0980C9D230C802200DB1998 /* rDefenderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0980C9C230C802200DB1998 /* rDefenderUITests.swift */; };
 		B09ABE39231040F000EE0D58 /* AddGuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09ABE38231040F000EE0D58 /* AddGuestViewController.swift */; };
+		B0A4704223268B7500B6C85D /* GuestsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A4704123268B7500B6C85D /* GuestsListViewController.swift */; };
+		B0A470452326F26200B6C85D /* GuestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A470432326F26200B6C85D /* GuestTableViewCell.swift */; };
+		B0A470462326F26200B6C85D /* GuestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A470442326F26200B6C85D /* GuestTableViewCell.xib */; };
 		C3A1A46DF8D84C0D4CC45C13 /* Pods_rDefenderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5142A55FEC5E53DAEFEE6E9E /* Pods_rDefenderUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +83,9 @@
 		B0980C9C230C802200DB1998 /* rDefenderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rDefenderUITests.swift; sourceTree = "<group>"; };
 		B0980C9E230C802200DB1998 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B09ABE38231040F000EE0D58 /* AddGuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGuestViewController.swift; sourceTree = "<group>"; };
+		B0A4704123268B7500B6C85D /* GuestsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestsListViewController.swift; sourceTree = "<group>"; };
+		B0A470432326F26200B6C85D /* GuestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestTableViewCell.swift; sourceTree = "<group>"; };
+		B0A470442326F26200B6C85D /* GuestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuestTableViewCell.xib; sourceTree = "<group>"; };
 		C033C420627B72D932883E63 /* Pods-rDefenderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rDefenderUITests.debug.xcconfig"; path = "Target Support Files/Pods-rDefenderUITests/Pods-rDefenderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,14 +127,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B065ED3A230FF57A009891A1 /* Estensions */ = {
+		B065ED3A230FF57A009891A1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				B065ED3B230FF5B5009891A1 /* extensionUIView.swift */,
 				B065ED3D230FF8EC009891A1 /* extensionUIColor.swift */,
 				B043BD692315B0D900ECF63A /* extensionUIDevice.swift */,
 			);
-			path = Estensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B0980C70230C801F00DB1998 = {
@@ -156,16 +162,18 @@
 		B0980C7B230C801F00DB1998 /* rDefender */ = {
 			isa = PBXGroup;
 			children = (
-				B065ED3A230FF57A009891A1 /* Estensions */,
+				B065ED3A230FF57A009891A1 /* Extensions */,
 				B0980C7C230C801F00DB1998 /* AppDelegate.swift */,
 				B0513FCF231BC0D70066FBC0 /* DBManager.swift */,
 				B0513FD3231BEB500066FBC0 /* AuthManager.swift */,
 				B0513FD1231BC2430066FBC0 /* Guest.swift */,
 				B043BD6D2317E10400ECF63A /* AuthViewController.swift */,
 				B0513FD5231D499B0066FBC0 /* RegistrationViewController.swift */,
+				B0A470472326F26E00B6C85D /* Cells */,
 				B0980C7E230C801F00DB1998 /* MainViewController.swift */,
 				B0513FD7231E6DC10066FBC0 /* SettingViewController.swift */,
 				B09ABE38231040F000EE0D58 /* AddGuestViewController.swift */,
+				B0A4704123268B7500B6C85D /* GuestsListViewController.swift */,
 				B0980C80230C801F00DB1998 /* Main.storyboard */,
 				B0980C83230C802100DB1998 /* Assets.xcassets */,
 				B0980C85230C802200DB1998 /* LaunchScreen.storyboard */,
@@ -191,6 +199,15 @@
 				B0980C9E230C802200DB1998 /* Info.plist */,
 			);
 			path = rDefenderUITests;
+			sourceTree = "<group>";
+		};
+		B0A470472326F26E00B6C85D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B0A470432326F26200B6C85D /* GuestTableViewCell.swift */,
+				B0A470442326F26200B6C85D /* GuestTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		B2A2BBA0451F1A3C187C6A62 /* Pods */ = {
@@ -318,6 +335,7 @@
 				B043BD6C2317236D00ECF63A /* GoogleService-Info.plist in Resources */,
 				B0980C84230C802100DB1998 /* Assets.xcassets in Resources */,
 				B0980C82230C801F00DB1998 /* Main.storyboard in Resources */,
+				B0A470462326F26200B6C85D /* GuestTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,11 +446,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0A4704223268B7500B6C85D /* GuestsListViewController.swift in Sources */,
 				B065ED3C230FF5B5009891A1 /* extensionUIView.swift in Sources */,
 				B09ABE39231040F000EE0D58 /* AddGuestViewController.swift in Sources */,
 				B0513FD2231BC2430066FBC0 /* Guest.swift in Sources */,
 				B0513FD6231D499B0066FBC0 /* RegistrationViewController.swift in Sources */,
 				B0513FD4231BEB500066FBC0 /* AuthManager.swift in Sources */,
+				B0A470452326F26200B6C85D /* GuestTableViewCell.swift in Sources */,
 				B0980C7F230C801F00DB1998 /* MainViewController.swift in Sources */,
 				B043BD6E2317E10400ECF63A /* AuthViewController.swift in Sources */,
 				B043BD6A2315B0D900ECF63A /* extensionUIDevice.swift in Sources */,

@@ -247,6 +247,9 @@
                                 <state key="normal" title="Список гостей">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="guestListButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KxB-ZX-2eu"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rjs-ff-t6V">
                                 <rect key="frame" x="0.0" y="745" width="414" height="1"/>
@@ -308,6 +311,7 @@
                         <outlet property="truckButton" destination="Auq-yZ-Hn6" id="jpt-x1-WdT"/>
                         <segue destination="r9z-wi-CSG" kind="show" identifier="guest" id="PIN-4e-vx0"/>
                         <segue destination="MEp-AU-PYr" kind="show" identifier="fromMainVCToSettingVC" id="OXN-0O-U2G"/>
+                        <segue destination="XTd-lC-ffs" kind="show" identifier="fromMainVCtoListOfGuest" id="I3i-n0-TBU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -450,6 +454,21 @@
                                     <constraint firstAttribute="height" constant="80" id="yNX-0O-Mmh"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K8M-Ei-NDx">
+                                <rect key="frame" x="157" y="398" width="100" height="100"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="tw5-tV-SMI">
+                                        <rect key="frame" x="31.5" y="31.5" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="5wD-MO-UBu"/>
+                                    <constraint firstItem="tw5-tV-SMI" firstAttribute="centerY" secondItem="K8M-Ei-NDx" secondAttribute="centerY" id="AWl-yJ-G1c"/>
+                                    <constraint firstAttribute="height" constant="100" id="BMa-X7-eyl"/>
+                                    <constraint firstItem="tw5-tV-SMI" firstAttribute="centerX" secondItem="K8M-Ei-NDx" secondAttribute="centerX" id="Uye-EH-T5h"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.1019607843" green="0.074509803920000006" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -458,6 +477,7 @@
                             <constraint firstItem="K6k-8L-2QN" firstAttribute="bottom" secondItem="qx9-fF-gyh" secondAttribute="bottom" constant="32" id="2cV-gc-Lv6"/>
                             <constraint firstItem="rS9-ae-fuv" firstAttribute="top" secondItem="by9-lz-gOH" secondAttribute="bottom" id="9xi-Xl-Oq6"/>
                             <constraint firstItem="nOK-CF-tS8" firstAttribute="top" secondItem="by9-lz-gOH" secondAttribute="bottom" id="DhG-K8-593"/>
+                            <constraint firstItem="K8M-Ei-NDx" firstAttribute="centerX" secondItem="KF8-b4-Hcb" secondAttribute="centerX" id="Gw2-QK-ugd"/>
                             <constraint firstItem="by9-lz-gOH" firstAttribute="leading" secondItem="K6k-8L-2QN" secondAttribute="leading" id="IQc-EP-1Ag"/>
                             <constraint firstItem="rS9-ae-fuv" firstAttribute="leading" secondItem="K6k-8L-2QN" secondAttribute="leading" id="R7W-W5-hKI"/>
                             <constraint firstItem="K6k-8L-2QN" firstAttribute="trailing" secondItem="nOK-CF-tS8" secondAttribute="trailing" constant="8" id="S4a-Rl-0Pa"/>
@@ -468,6 +488,7 @@
                             <constraint firstItem="8ir-yU-jCb" firstAttribute="top" secondItem="rS9-ae-fuv" secondAttribute="bottom" constant="32" id="b0F-af-FO5"/>
                             <constraint firstItem="qx9-fF-gyh" firstAttribute="top" secondItem="SrP-eM-m3h" secondAttribute="bottom" constant="32" id="bde-D5-owb"/>
                             <constraint firstItem="qx9-fF-gyh" firstAttribute="top" secondItem="SrP-eM-m3h" secondAttribute="bottom" constant="32" id="cDf-CO-bZd"/>
+                            <constraint firstItem="K8M-Ei-NDx" firstAttribute="centerY" secondItem="KF8-b4-Hcb" secondAttribute="centerY" id="dXG-LY-p3w"/>
                             <constraint firstItem="8ir-yU-jCb" firstAttribute="leading" secondItem="K6k-8L-2QN" secondAttribute="leading" constant="16" id="e5q-ff-TOf"/>
                             <constraint firstItem="nOK-CF-tS8" firstAttribute="leading" secondItem="rS9-ae-fuv" secondAttribute="trailing" constant="8" id="gCm-X2-BbS"/>
                             <constraint firstItem="K6k-8L-2QN" firstAttribute="trailing" secondItem="qx9-fF-gyh" secondAttribute="trailing" constant="16" id="jUo-hd-eBK"/>
@@ -477,6 +498,8 @@
                         <viewLayoutGuide key="safeArea" id="K6k-8L-2QN"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="tw5-tV-SMI" id="yXo-Ri-qua"/>
+                        <outlet property="activityIndicatorContainerView" destination="K8M-Ei-NDx" id="SOu-KK-yeD"/>
                         <outlet property="carModelTextField" destination="Hhe-K4-U89" id="Y1m-fS-uFU"/>
                         <outlet property="carNumberTextField" destination="g1B-1R-zRU" id="IfZ-0P-Ytm"/>
                         <outlet property="guestNameTextField" destination="zYv-CU-TNl" id="otx-yF-BSG"/>
@@ -489,6 +512,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dwo-8u-s0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1567" y="115"/>
+        </scene>
+        <!--Guests List View Controller-->
+        <scene sceneID="nUs-2C-i8p">
+            <objects>
+                <viewController id="XTd-lC-ffs" customClass="GuestsListViewController" customModule="rDefender" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bcs-Ed-aVL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cOV-TT-D3x">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="0.1019607843" green="0.074509803920000006" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cOV-TT-D3x" firstAttribute="top" secondItem="tHo-mB-6ia" secondAttribute="top" id="DPA-Rt-12J"/>
+                            <constraint firstItem="tHo-mB-6ia" firstAttribute="trailing" secondItem="cOV-TT-D3x" secondAttribute="trailing" id="c5n-2e-QJw"/>
+                            <constraint firstItem="tHo-mB-6ia" firstAttribute="bottom" secondItem="cOV-TT-D3x" secondAttribute="bottom" id="mby-F7-vhS"/>
+                            <constraint firstItem="cOV-TT-D3x" firstAttribute="leading" secondItem="tHo-mB-6ia" secondAttribute="leading" id="rCg-zf-kgf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tHo-mB-6ia"/>
+                    </view>
+                    <connections>
+                        <outlet property="mainTableView" destination="cOV-TT-D3x" id="Zd2-Hz-8Ei"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d8d-cT-NWm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="799" y="854"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="kDi-bZ-E38">

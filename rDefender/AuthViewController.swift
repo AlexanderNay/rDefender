@@ -13,6 +13,7 @@ class AuthViewController: UIViewController {
     
     // ВАЛИДАЦИЯ ПО НОМЕРУ ТЕЛЕФОНА (только добавленные номера могут регистрироваться)
     // Пользователь региструется по заявке
+    // Обучалка при первом запуске??
     
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -28,7 +29,6 @@ class AuthViewController: UIViewController {
         super.viewDidLoad()
         print("**INIT: ", String(describing: self.description))
         isCurrentUserExist = AuthManager.shared.isCurrentUserExist()
-        presentingViewController?.dismiss(animated: false, completion: nil)
         
         // Do any additional setup after loading the view.
     }

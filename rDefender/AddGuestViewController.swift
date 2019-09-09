@@ -39,10 +39,18 @@ class AddGuestViewController: UIViewController {
     @IBOutlet weak var carModelTextField: UITextField!
     @IBOutlet weak var carNumberTextField: UITextField!
     
+    
+    //Activity Indicator
+    @IBOutlet weak var activityIndicatorContainerView: UIView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("**DEINIT: ", String(describing: self.description))
+        print("**INIT: ", String(describing: self.description))
+        
+        setupUI()
         
         notificateKeyboardposition()
         setConstraintsForSmallScreens()
@@ -67,6 +75,16 @@ class AddGuestViewController: UIViewController {
             print("truck")
         }
  
+    }
+    
+    
+    private func setupUI() {
+        
+        //Activiti Indicator
+        activityIndicatorContainerView.isHidden = true
+        activityIndicatorContainerView.layer.cornerRadius = 8
+        activityIndicatorContainerView.clipsToBounds = true
+        activityIndicator.hidesWhenStopped = true
     }
     
     //TODO: Cose keyboard when tap out of text field!
@@ -95,6 +113,7 @@ class AddGuestViewController: UIViewController {
     //MARK: Actions
     
     @IBAction func createPassButtonPressed(_ sender: UIButton) {
+        startActivityIndicator()
         //TODO: Save informaton to DataBase from text fields
         //TODO: Show process indictor
         //TODO: If success - back to main screen
@@ -119,11 +138,26 @@ class AddGuestViewController: UIViewController {
                 //TODO: Show alert
                 return
             }
-            
-            self.dismiss(animated: true, completion: nil)
+            self.stopActivityIndicator()
+            self.navigationController?.popToRootViewController(animated: true)
         }
  
     }
+    
+    
+    //Activity Indicator Methods
+    
+    private func startActivityIndicator() {
+        activityIndicatorContainerView.isHidden = false
+        activityIndicator.startAnimating()
+    }
+    
+    private func stopActivityIndicator() {
+        activityIndicatorContainerView.isHidden = true
+        activityIndicator.stopAnimating()
+    }
+    
+    
     
     
 

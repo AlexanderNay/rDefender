@@ -11,6 +11,7 @@ import Firebase
 
 class AuthManager {
     static let shared = AuthManager()
+    private let db = Firestore.firestore()
     
     func isCurrentUserExist() -> Bool {
         return Auth.auth().currentUser != nil
@@ -34,6 +35,24 @@ class AuthManager {
             
             guard let result = result else { return }
             //TODO: describe 'success' in a good way in all the progeject
+            
+            let ref = self.db.collection("users").document(result.user.uid)
+            
+            ref.setData([
+                "email" : result.user.email ?? "",
+                "name" : "",
+                "aprtmentNumber" : "",
+                "houseNumber" : ""
+            ]) { error in
+                if let error = error {
+                    print("Error adding document: \(error)")
+                    //completion(nil, error)
+                } else {
+                    print("Document added with ID: \(ref.documentID)")
+                    //completion(ref, nil)
+                }
+                
+            }
             print(result)
             completion(result, nil)
         }

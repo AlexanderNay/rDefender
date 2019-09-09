@@ -43,7 +43,6 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         print("**INIT: ", String(describing: self.description))
         // Do any additional setup after loading the view.
-        presentingViewController?.dismiss(animated: true, completion: nil)
         setupUI()
         setNavigationBar()
         setConstraintsForSmallScreens()
@@ -130,6 +129,11 @@ class MainViewController: UIViewController {
     
     @IBAction func settingsButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "fromMainVCToSettingVC", sender: self)
+    }
+    
+    @IBAction func guestListButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "fromMainVCtoListOfGuest", sender: self)
+        
     }
     
     
