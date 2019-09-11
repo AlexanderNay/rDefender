@@ -30,7 +30,9 @@ class DBManager {
             "id" : ref.documentID,
             "name" : guest.name ?? "",
             "carModel" : guest.carModel ?? "",
-            "carNumber" : guest.carNumber ?? ""
+            "carNumber" : guest.carNumber ?? "",
+            "iconOfGuest" : guest.iconOfGuest,
+            "typeOfGuest" : guest.typeOfGuest.rawValue
         ]) { error in
             if let error = error {
                 print("Error adding document: \(error)")

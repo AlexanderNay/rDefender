@@ -122,14 +122,10 @@ class AddGuestViewController: UIViewController {
         let name = guestNameTextField.text ?? ""
         let carModel = carModelTextField.text ?? ""
         let carNumber = carNumberTextField.text ?? ""
+        let typeOfGuest = getTypeOfGuest(name: name, carModel: carModel, carNumber: carNumber)
         
-        guard name != "" || (carModel != "" && carNumber != "") else {
-            
-            //TODO: Show alert
-            return
-        }
         
-        let guest = Guest(id: "", name: name, carModel: carModel, carNumber: carNumber, date: Date())
+        let guest = Guest(id: "", name: name, carModel: carModel, carNumber: carNumber, date: Date(), typeOfGuest: typeOfGuest)
         
         DBManager.shared.seveGuest(guest: guest) { (result, error) in
             
@@ -142,6 +138,19 @@ class AddGuestViewController: UIViewController {
             self.navigationController?.popToRootViewController(animated: true)
         }
  
+    }
+    
+    private func getTypeOfGuest(name: String, carModel: String, carNumber: String) -> TypeOfGuest {
+        if carModel == "", carNumber == "" {
+            return .person
+        } else {
+            return .car
+        }
+    }
+    
+    
+    private func getRandomIconFrom(array: [String]) -> String {
+        return array[Int.random(in: 0..<array.count)]
     }
     
     
@@ -180,6 +189,8 @@ class AddGuestViewController: UIViewController {
 
 //Hide keyboard
 extension AddGuestViewController {
+    
+    //TODO: Keyboard BUG!!!
     
     @objc func keyboardWillShow(notification: NSNotification) {
         print("keyboard will show")

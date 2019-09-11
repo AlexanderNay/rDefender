@@ -18,7 +18,7 @@ class GuestTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var rightImageLabel: UILabel!
     
-    let emojiCarArray = ["🚗","🚙","🏎", "🚘"]
+    //let emojiCarArray = ["🚗","🚙","🏎", "🚘"]
     let emojiForWaitingStatus = ["✅", "❌", "⏱"]
     
     
@@ -30,8 +30,7 @@ class GuestTableViewCell: UITableViewCell {
     }
     
     func setupCell(guest: Guest) {
-        let indexForEmojy = Int.random(in: 0..<emojiCarArray.count)
-        leftImageLabel.text = emojiCarArray[indexForEmojy]
+        leftImageLabel.text = guest.iconOfGuest
         
         let indexForEmojyWaitingStatus = Int.random(in: 0..<emojiForWaitingStatus.count)
         rightImageLabel.text = emojiForWaitingStatus[indexForEmojyWaitingStatus]

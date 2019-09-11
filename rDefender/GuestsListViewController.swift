@@ -32,10 +32,10 @@ class GuestsListViewController: UIViewController {
     
     
     private func loadData() {
+        //TODO: Activity indicator
         DBManager.shared.getGuests { (results, error) in
             guard let results = results else { return }
             let guests = results.documents.map {Guest(data: $0.data())}
-            print(guests)
             self.listOfGuests = guests
             self.mainTableView.reloadData()
         }
