@@ -17,6 +17,10 @@
 		B0513FD4231BEB500066FBC0 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0513FD3231BEB500066FBC0 /* AuthManager.swift */; };
 		B0513FD6231D499B0066FBC0 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0513FD5231D499B0066FBC0 /* RegistrationViewController.swift */; };
 		B0513FD8231E6DC10066FBC0 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0513FD7231E6DC10066FBC0 /* SettingViewController.swift */; };
+		B0580C29232A5A2F0009D3DC /* CarModelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0580C27232A5A2F0009D3DC /* CarModelTableViewCell.swift */; };
+		B0580C2A232A5A2F0009D3DC /* CarModelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0580C28232A5A2F0009D3DC /* CarModelTableViewCell.xib */; };
+		B0593993232939A400959EBE /* csv.csv in Resources */ = {isa = PBXBuildFile; fileRef = B0593992232939A300959EBE /* csv.csv */; };
+		B05939952329935700959EBE /* CarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05939942329935700959EBE /* CarListViewController.swift */; };
 		B065ED3C230FF5B5009891A1 /* extensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B065ED3B230FF5B5009891A1 /* extensionUIView.swift */; };
 		B065ED3E230FF8EC009891A1 /* extensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B065ED3D230FF8EC009891A1 /* extensionUIColor.swift */; };
 		B0980C7D230C801F00DB1998 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0980C7C230C801F00DB1998 /* AppDelegate.swift */; };
@@ -67,6 +71,10 @@
 		B0513FD3231BEB500066FBC0 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		B0513FD5231D499B0066FBC0 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		B0513FD7231E6DC10066FBC0 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		B0580C27232A5A2F0009D3DC /* CarModelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModelTableViewCell.swift; sourceTree = "<group>"; };
+		B0580C28232A5A2F0009D3DC /* CarModelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarModelTableViewCell.xib; sourceTree = "<group>"; };
+		B0593992232939A300959EBE /* csv.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = csv.csv; sourceTree = "<group>"; };
+		B05939942329935700959EBE /* CarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewController.swift; sourceTree = "<group>"; };
 		B065ED3B230FF5B5009891A1 /* extensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionUIView.swift; sourceTree = "<group>"; };
 		B065ED3D230FF8EC009891A1 /* extensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionUIColor.swift; sourceTree = "<group>"; };
 		B0980C79230C801F00DB1998 /* rDefender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rDefender.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,16 +175,18 @@
 				B0513FCF231BC0D70066FBC0 /* DBManager.swift */,
 				B0513FD3231BEB500066FBC0 /* AuthManager.swift */,
 				B0513FD1231BC2430066FBC0 /* Guest.swift */,
+				B0A470472326F26E00B6C85D /* Cells */,
 				B043BD6D2317E10400ECF63A /* AuthViewController.swift */,
 				B0513FD5231D499B0066FBC0 /* RegistrationViewController.swift */,
-				B0A470472326F26E00B6C85D /* Cells */,
 				B0980C7E230C801F00DB1998 /* MainViewController.swift */,
 				B0513FD7231E6DC10066FBC0 /* SettingViewController.swift */,
 				B09ABE38231040F000EE0D58 /* AddGuestViewController.swift */,
 				B0A4704123268B7500B6C85D /* GuestsListViewController.swift */,
+				B05939942329935700959EBE /* CarListViewController.swift */,
 				B0980C80230C801F00DB1998 /* Main.storyboard */,
 				B0980C83230C802100DB1998 /* Assets.xcassets */,
 				B0980C85230C802200DB1998 /* LaunchScreen.storyboard */,
+				B0593992232939A300959EBE /* csv.csv */,
 				B043BD6B2317236D00ECF63A /* GoogleService-Info.plist */,
 				B0980C88230C802200DB1998 /* Info.plist */,
 			);
@@ -206,6 +216,8 @@
 			children = (
 				B0A470432326F26200B6C85D /* GuestTableViewCell.swift */,
 				B0A470442326F26200B6C85D /* GuestTableViewCell.xib */,
+				B0580C27232A5A2F0009D3DC /* CarModelTableViewCell.swift */,
+				B0580C28232A5A2F0009D3DC /* CarModelTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -331,9 +343,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0580C2A232A5A2F0009D3DC /* CarModelTableViewCell.xib in Resources */,
 				B0980C87230C802200DB1998 /* LaunchScreen.storyboard in Resources */,
 				B043BD6C2317236D00ECF63A /* GoogleService-Info.plist in Resources */,
 				B0980C84230C802100DB1998 /* Assets.xcassets in Resources */,
+				B0593993232939A400959EBE /* csv.csv in Resources */,
 				B0980C82230C801F00DB1998 /* Main.storyboard in Resources */,
 				B0A470462326F26200B6C85D /* GuestTableViewCell.xib in Resources */,
 			);
@@ -446,7 +460,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0580C29232A5A2F0009D3DC /* CarModelTableViewCell.swift in Sources */,
 				B0A4704223268B7500B6C85D /* GuestsListViewController.swift in Sources */,
+				B05939952329935700959EBE /* CarListViewController.swift in Sources */,
 				B065ED3C230FF5B5009891A1 /* extensionUIView.swift in Sources */,
 				B09ABE39231040F000EE0D58 /* AddGuestViewController.swift in Sources */,
 				B0513FD2231BC2430066FBC0 /* Guest.swift in Sources */,

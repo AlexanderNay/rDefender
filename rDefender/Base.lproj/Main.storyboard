@@ -342,11 +342,11 @@
                                         <color key="textColor" red="0.51764705879999995" green="0.40000000000000002" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zYv-CU-TNl">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="zYv-CU-TNl">
                                         <rect key="frame" x="0.0" y="50" width="382" height="34"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Марка автомобиля:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="n4u-rJ-FyB">
                                         <rect key="frame" x="0.0" y="100" width="231" height="34"/>
@@ -366,7 +366,7 @@
                                         <color key="textColor" red="0.51764705879999995" green="0.40000000000000002" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g1B-1R-zRU">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="g1B-1R-zRU">
                                         <rect key="frame" x="0.0" y="250" width="382" height="34"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -507,11 +507,45 @@
                         <outlet property="rasskazovoLabelHighConstraint" destination="mFu-i8-Q3Z" id="UFF-08-OSo"/>
                         <outlet property="rasskazovoLabelWidthConstraint" destination="WJ9-86-29l" id="qqQ-RV-fbf"/>
                         <outlet property="textFieldsStack" destination="8ir-yU-jCb" id="7kK-2C-Eol"/>
+                        <segue destination="4Oo-fw-EVW" kind="show" identifier="fromAddGuestVCtoCarListVC" id="XcP-ph-Z6a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dwo-8u-s0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1567" y="115"/>
+        </scene>
+        <!--Car List View Controller-->
+        <scene sceneID="duA-hi-B2I">
+            <objects>
+                <viewController id="4Oo-fw-EVW" customClass="CarListViewController" customModule="rDefender" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tz1-tx-aea">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cpx-SS-OQm">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.1019607843" green="0.074509803920000006" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" red="0.51764705879999995" green="0.40000000000000002" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="separatorInset" minX="44" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <color key="sectionIndexBackgroundColor" red="0.1019607843" green="0.074509803920000006" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1019607843" green="0.074509803920000006" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fng-mw-tnU" firstAttribute="trailing" secondItem="cpx-SS-OQm" secondAttribute="trailing" id="Erp-bC-mvz"/>
+                            <constraint firstItem="cpx-SS-OQm" firstAttribute="leading" secondItem="fng-mw-tnU" secondAttribute="leading" id="FIU-n2-LqN"/>
+                            <constraint firstItem="fng-mw-tnU" firstAttribute="bottom" secondItem="cpx-SS-OQm" secondAttribute="bottom" id="W5F-GV-XDa"/>
+                            <constraint firstItem="cpx-SS-OQm" firstAttribute="top" secondItem="fng-mw-tnU" secondAttribute="top" id="dFv-Hh-rxc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fng-mw-tnU"/>
+                    </view>
+                    <connections>
+                        <outlet property="mainTableView" destination="cpx-SS-OQm" id="pIf-qf-uGT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9xM-PV-tGv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2384" y="115"/>
         </scene>
         <!--Guests List View Controller-->
         <scene sceneID="nUs-2C-i8p">
@@ -527,7 +561,7 @@
                                 <color key="sectionIndexBackgroundColor" red="0.1019607843" green="0.074509803920000006" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.1019607843" green="0.074509803920000006" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="cOV-TT-D3x" firstAttribute="top" secondItem="tHo-mB-6ia" secondAttribute="top" id="DPA-Rt-12J"/>
                             <constraint firstItem="tHo-mB-6ia" firstAttribute="trailing" secondItem="cOV-TT-D3x" secondAttribute="trailing" id="c5n-2e-QJw"/>

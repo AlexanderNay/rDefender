@@ -16,6 +16,8 @@ enum GuestType: Int {
 
 class AddGuestViewController: UIViewController {
     
+    
+    
     var guestType: GuestType!
     
     var viewOriginYPosition: CGFloat = 0
@@ -49,6 +51,7 @@ class AddGuestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("**INIT: ", String(describing: self.description))
+        carModelTextField.delegate = self
         
         setupUI()
         
@@ -166,19 +169,23 @@ class AddGuestViewController: UIViewController {
         activityIndicator.stopAnimating()
     }
     
-    
+    //Sugue Indentificator - "fromAddGuestVCtoCarListVC"
     
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "fromAddGuestVCtoCarListVC" {
+            let vc = segue.destination as! CarListViewController
+            vc.delegate = self
+        }
     }
-    */
+    
     
     deinit {
         print("**DEINIT: ", String(describing: self.description))
@@ -230,6 +237,21 @@ extension AddGuestViewController {
         view.endEditing(true)
     }
     
+}
+
+extension AddGuestViewController: UITextFieldDelegate {
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        performSegue(withIdentifier: "fromAddGuestVCtoCarListVC", sender: self)
+        return false
+    }
+    
+}
+
+
+extension AddGuestViewController: CarListViewControllerDelegate {
+    func getCarModel(carModel: String) {
+        carModelTextField.text = carModel
+    }
 }
 
 

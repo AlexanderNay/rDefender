@@ -6,6 +6,8 @@
 //  Copyright © 2019 AlexanderN. All rights reserved.
 //
 
+
+
 import UIKit
 
 class GuestsListViewController: UIViewController {
@@ -17,20 +19,18 @@ class GuestsListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
         mainTableView.delegate = self
         mainTableView.dataSource = self
         registrationCells()
         setupUI()
         loadData()
-
-        // Do any additional setup after loading the view.
     }
     
     private func setupUI() {
         mainTableView.backgroundColor = #colorLiteral(red: 0.1019607843, green: 0.07450980392, blue: 0.03921568627, alpha: 1)
     }
-    
-    
+
     private func loadData() {
         //TODO: Activity indicator
         DBManager.shared.getGuests { (results, error) in
@@ -70,3 +70,4 @@ extension GuestsListViewController: UITableViewDelegate, UITableViewDataSource {
     
     
 }
+
