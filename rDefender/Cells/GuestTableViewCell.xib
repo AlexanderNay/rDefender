@@ -83,6 +83,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" red="0.1019607843" green="0.074509803920000006" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="Fu7-VG-YHZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="HzD-TE-hG8"/>
                     <constraint firstAttribute="bottom" secondItem="Fu7-VG-YHZ" secondAttribute="bottom" id="Wp8-eQ-Y3X"/>
@@ -90,6 +91,7 @@
                     <constraint firstAttribute="trailing" secondItem="Fu7-VG-YHZ" secondAttribute="trailing" id="tPB-oF-vWk"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.1019607843" green="0.074509803920000006" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="containerLeftImageView" destination="M9z-eX-5AB" id="GdZ-aO-6f2"/>

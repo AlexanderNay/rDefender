@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol CarListViewControllerDelegate: AnyObject {
+protocol CarListViewControllerDelegate: class {
     func getCarModel(carModel: String)
 }
 

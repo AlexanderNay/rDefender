@@ -18,8 +18,23 @@ class GuestTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var rightImageLabel: UILabel!
     
-    //let emojiCarArray = ["🚗","🚙","🏎", "🚘"]
-    let emojiForWaitingStatus = ["✅", "❌", "⏱"]
+    
+    
+    private func getStatusLabel(guestStatus: GuestStatus) -> String {
+        //let emojiCarArray = ["🚗","🚙","🏎", "🚘"]
+        //let emojiForWaitingStatus = ["✅", "❌", "⏱", "⚠️"]
+        switch guestStatus {
+        case .arrived:
+            return "✅"
+        case .didNotArrive:
+            return "❌"
+        case .onHisWay:
+            return "⏱"
+        case .error:
+            return "⚠️"
+        }
+        
+    }
     
     
     override func awakeFromNib() {
@@ -31,9 +46,8 @@ class GuestTableViewCell: UITableViewCell {
     
     func setupCell(guest: Guest) {
         leftImageLabel.text = guest.iconOfGuest
-        
-        let indexForEmojyWaitingStatus = Int.random(in: 0..<emojiForWaitingStatus.count)
-        rightImageLabel.text = emojiForWaitingStatus[indexForEmojyWaitingStatus]
+       
+        rightImageLabel.text = getStatusLabel(guestStatus: guest.status)
         
         nameLabel.text = guest.name
         descriptionLabel.text = guest.carNumber! + " " + guest.carModel!
@@ -41,8 +55,6 @@ class GuestTableViewCell: UITableViewCell {
     
     private func setupUI() {
         containerLeftImageView.layer.cornerRadius = 8
-        
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

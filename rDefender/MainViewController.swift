@@ -11,7 +11,11 @@ import UIKit
 class MainViewController: UIViewController {
     
 
-    @IBOutlet var guestButton: UIButton!
+    @IBOutlet var guestButton: UIButton! {
+        didSet{
+            //TODO: Try to set button settings here!!!
+        }
+    }
     @IBOutlet var carButton: UIButton!
     @IBOutlet var truckButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!

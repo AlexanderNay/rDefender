@@ -18,14 +18,35 @@ enum TypeOfGuest: String {
     static func getTipeOfGuestFrom(data: [String: Any]) -> TypeOfGuest {
         guard let typeOfGuestString: String = data["typeOfGuest"] as? String else { return .unknown }
         switch typeOfGuestString {
-        case "person":
+        case person.rawValue:
             return .person
-        case "car":
+        case car.rawValue:
             return .car
-        case "truck":
+        case truck.rawValue:
             return .truck
         default:
             return .unknown
+        }
+    }
+}
+
+enum GuestStatus: String {
+    case arrived
+    case onHisWay
+    case didNotArrive
+    case error
+    
+    static func getGuestStatus(data: [String : Any]) -> GuestStatus {
+        guard let guestStatusString = data["guestStatus"] as? String else { return .error}
+        switch guestStatusString {
+        case arrived.rawValue:
+            return .arrived
+        case onHisWay.rawValue:
+            return .onHisWay
+        case didNotArrive.rawValue:
+            return .didNotArrive
+        default:
+            return .error
         }
     }
 }
@@ -39,6 +60,7 @@ struct Guest {
     let date: Date
     let typeOfGuest: TypeOfGuest
     let iconOfGuest: String
+    let status: GuestStatus
 
     
     
@@ -50,6 +72,7 @@ struct Guest {
         self.date = Date()
         self.typeOfGuest = TypeOfGuest.getTipeOfGuestFrom(data: data)
         self.iconOfGuest = (data["iconOfGuest"] as? String) ?? "❔"
+        self.status = GuestStatus.getGuestStatus(data: data)
     }
 
     
@@ -79,6 +102,6 @@ struct Guest {
         self.date = date
         self.typeOfGuest = typeOfGuest
         self.iconOfGuest = getIconOfGuest(typeOfGuest: typeOfGuest)
-        
+        self.status = .onHisWay
     }
 }
