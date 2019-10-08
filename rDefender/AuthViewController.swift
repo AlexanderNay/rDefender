@@ -14,6 +14,7 @@ class AuthViewController: UIViewController {
     // ВАЛИДАЦИЯ ПО НОМЕРУ ТЕЛЕФОНА (только добавленные номера могут регистрироваться)
     // Пользователь региструется по заявке
     // Обучалка при первом запуске??
+    //
     
     @IBOutlet weak var emailTextField: UITextField!
     
