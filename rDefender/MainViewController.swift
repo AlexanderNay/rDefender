@@ -50,6 +50,7 @@ class MainViewController: UIViewController {
         setupUI()
         setNavigationBar()
         setConstraintsForSmallScreens()
+        //
         
     }
     
