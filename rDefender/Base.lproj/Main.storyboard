@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hxq-PL-1xd">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hxq-PL-1xd">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -334,41 +332,38 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="8ir-yU-jCb">
-                                <rect key="frame" x="16" y="271" width="382" height="284"/>
+                                <rect key="frame" x="16" y="271" width="382" height="308"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя гостя:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="okH-ZN-vd1">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <color key="textColor" red="0.51764705879999995" green="0.40000000000000002" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="zYv-CU-TNl">
-                                        <rect key="frame" x="0.0" y="50" width="382" height="34"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="54" width="382" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Марка автомобиля:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="n4u-rJ-FyB">
-                                        <rect key="frame" x="0.0" y="100" width="231" height="34"/>
+                                        <rect key="frame" x="0.0" y="108" width="231" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <color key="textColor" red="0.51764705879999995" green="0.40000000000000002" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hhe-K4-U89">
-                                        <rect key="frame" x="0.0" y="150" width="382" height="34"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="162" width="382" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Номер автомобиля:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="puJ-JB-DBP">
-                                        <rect key="frame" x="0.0" y="200" width="234.5" height="34"/>
+                                        <rect key="frame" x="0.0" y="216" width="234.5" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <color key="textColor" red="0.51764705879999995" green="0.40000000000000002" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="g1B-1R-zRU">
-                                        <rect key="frame" x="0.0" y="250" width="382" height="34"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="270" width="382" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -585,11 +580,11 @@
             <objects>
                 <viewController id="Ugn-tq-tNC" customClass="RegistrationViewController" customModule="rDefender" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m6e-Ug-b4X">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1zX-B7-7U5">
-                                <rect key="frame" x="16" y="238" width="382" height="43"/>
+                                <rect key="frame" x="16" y="194" width="382" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="rCE-Di-Yfq"/>
                                 </constraints>
@@ -598,22 +593,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X6k-uh-MEf">
-                                <rect key="frame" x="16" y="313" width="382" height="44"/>
+                                <rect key="frame" x="16" y="269" width="382" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="9Dy-IP-Sdy"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YTS-xx-igw">
-                                <rect key="frame" x="16" y="401" width="382" height="44"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="16" y="357" width="382" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5W-9M-R01">
-                                <rect key="frame" x="16" y="489" width="382" height="52"/>
+                                <rect key="frame" x="16" y="445" width="382" height="52"/>
                                 <color key="backgroundColor" red="0.12941176469999999" green="0.6588235294" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="aqn-Fq-sui"/>
@@ -627,21 +620,21 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rasskasovo_label" translatesAutoresizingMaskIntoConstraints="NO" id="5yB-wq-nQn">
-                                <rect key="frame" x="0.0" y="44" width="200" height="150"/>
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="fHJ-sc-7S5"/>
                                     <constraint firstAttribute="width" constant="200" id="pGU-yP-Sqe"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Cc-iI-bMX">
-                                <rect key="frame" x="0.0" y="741" width="414" height="1"/>
+                                <rect key="frame" x="0.0" y="687" width="414" height="1"/>
                                 <color key="backgroundColor" red="0.51764705879999995" green="0.40000000000000002" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Ghr-Kb-Hmn"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ae-GD-JqZ">
-                                <rect key="frame" x="16" y="573" width="382" height="52"/>
+                                <rect key="frame" x="16" y="529" width="382" height="52"/>
                                 <color key="backgroundColor" red="0.12941176469999999" green="0.6588235294" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="ffE-uJ-5My"/>
@@ -713,7 +706,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="eoW-0J-VrE"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
@@ -722,7 +714,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="RoU-Lt-4GW"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
@@ -799,7 +790,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="4Pg-bY-oGX" id="nMC-5O-6gw"/>
                         <outlet property="passwordTextField" destination="jYS-bo-Mkh" id="1xf-wB-G36"/>
-                        <segue destination="WzJ-Ih-qTA" kind="presentation" identifier="fromAuthToMainVC" id="Adf-Wh-WWB"/>
+                        <segue destination="WzJ-Ih-qTA" kind="presentation" identifier="fromAuthToMainVC" modalPresentationStyle="fullScreen" id="Adf-Wh-WWB"/>
                         <segue destination="Ugn-tq-tNC" kind="showDetail" identifier="goToRegistration" id="xJw-qE-CMJ"/>
                     </connections>
                 </viewController>
