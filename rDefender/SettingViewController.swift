@@ -38,9 +38,6 @@ class SettingViewController: UIViewController {
         if ((navigationController?.viewControllers.first as? AuthViewController) != nil) {
             navigationController?.popToRootViewController(animated: true)
             print("POP")
-        } else {
-            performSegue(withIdentifier: "toAuthViewController", sender: nil)
-            print("SEGUE")
         }
         
         AuthManager.shared.signOut()

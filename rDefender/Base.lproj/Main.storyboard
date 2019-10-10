@@ -119,7 +119,6 @@
                         <outlet property="apartmentNumber" destination="t0h-4i-kCY" id="3Z3-xR-KLP"/>
                         <outlet property="houseNumber" destination="xuU-KD-deU" id="iCb-J1-oNI"/>
                         <outlet property="signOutAccountButton" destination="v8L-DP-FGq" id="rmG-c5-j6x"/>
-                        <segue destination="hxq-PL-1xd" kind="show" identifier="toAuthViewController" id="ZFl-CD-scV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4pG-Gl-j81" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -829,7 +828,6 @@
         <image name="rasskasovo_label" width="251" height="157"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2cj-fI-8Y1"/>
         <segue reference="xqx-x9-6M1"/>
     </inferredMetricsTieBreakers>
 </document>
