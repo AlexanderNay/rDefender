@@ -35,12 +35,21 @@ class SettingViewController: UIViewController {
     
     
     @IBAction func signOutAccountButtonPressed(_ sender: UIButton) {
-
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "startVC")
-        guard let startVC = vc else { return }
-        self.present(startVC, animated: true) {
-            self.navigationController?.viewControllers = []
+        if ((navigationController?.viewControllers.first as? AuthViewController) != nil) {
+            navigationController?.popToRootViewController(animated: true)
+            print("POP")
+        } else {
+            performSegue(withIdentifier: "toAuthViewController", sender: nil)
+            print("SEGUE")
         }
+        
+        AuthManager.shared.signOut()
+
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "startVC")
+//        guard let startVC = vc else { return }
+//        self.present(startVC, animated: true) {
+//            self.navigationController?.viewControllers = []
+//        }
     }
     
     

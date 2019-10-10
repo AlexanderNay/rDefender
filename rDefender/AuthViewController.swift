@@ -32,6 +32,10 @@ class AuthViewController: UIViewController {
         notificateKeyboardposition()
         isCurrentUserExist = AuthManager.shared.isCurrentUserExist()
         
+        if isCurrentUserExist {
+            self.performSegue(withIdentifier: "fromAuthToMainVCnoAnimated", sender: self)
+        }
+        
         // Do any additional setup after loading the view.
     }
     

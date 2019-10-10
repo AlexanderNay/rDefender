@@ -21,15 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
 
         
-        if (AuthManager.shared.isCurrentUserExist()){
-            
-            let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
-            let vc = sb.instantiateViewController(withIdentifier: "mainVC")
-            
-            vc.modalTransitionStyle = .crossDissolve
-            window?.rootViewController = vc
-            window?.makeKeyAndVisible()
-        }
+//        if (AuthManager.shared.isCurrentUserExist()){
+//            
+//            let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
+//            let vc = sb.instantiateViewController(withIdentifier: "mainVC")
+//            
+//            vc.modalTransitionStyle = .crossDissolve
+//            window?.rootViewController = vc
+//            window?.makeKeyAndVisible()
+//        }
         
         return true
     }

@@ -80,6 +80,15 @@ class AuthManager {
     }
     
     
+    func signOut() {
+        do {
+            try Auth.auth().signOut()
+        } catch let error {
+            print("signOut error: \(error)")
+        }
+    }
+    
+    
     //
     private init() {}
 }
