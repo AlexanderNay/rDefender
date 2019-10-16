@@ -21,8 +21,7 @@ class GuestTableViewCell: UITableViewCell {
     
     
     private func getStatusLabel(guestStatus: GuestStatus) -> String {
-        //let emojiCarArray = ["🚗","🚙","🏎", "🚘"]
-        //let emojiForWaitingStatus = ["✅", "❌", "⏱", "⚠️"]
+
         switch guestStatus {
         case .arrived:
             return "✅"
@@ -50,7 +49,12 @@ class GuestTableViewCell: UITableViewCell {
         rightImageLabel.text = getStatusLabel(guestStatus: guest.status)
         
         nameLabel.text = guest.name
-        descriptionLabel.text = guest.carNumber! + " " + guest.carModel!
+        
+        let date = guest.date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let dateString = dateFormatter.string(from: date)
+        descriptionLabel.text = guest.carNumber! + " " + guest.carModel! + " " + dateString
     }
     
     private func setupUI() {

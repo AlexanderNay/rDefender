@@ -29,12 +29,8 @@ class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("**INIT: ", String(describing: self.description))
+        navigationItem.hidesBackButton = true
         notificateKeyboardposition()
-        isCurrentUserExist = AuthManager.shared.isCurrentUserExist()
-        
-        if isCurrentUserExist {
-            self.performSegue(withIdentifier: "fromAuthToMainVCnoAnimated", sender: self)
-        }
         
         // Do any additional setup after loading the view.
     }
@@ -90,7 +86,7 @@ class AuthViewController: UIViewController {
     }
     
     private func showTheMainScreen() {
-        self.performSegue(withIdentifier: "fromAuthToMainVC", sender: self)
+        navigationController?.popToRootViewController(animated: true)
     }
     
     private func registrateUser() {

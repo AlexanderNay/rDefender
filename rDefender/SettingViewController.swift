@@ -35,10 +35,7 @@ class SettingViewController: UIViewController {
     
     
     @IBAction func signOutAccountButtonPressed(_ sender: UIButton) {
-        if ((navigationController?.viewControllers.first as? AuthViewController) != nil) {
-            navigationController?.popToRootViewController(animated: true)
-            print("POP")
-        }
+            navigationController?.popToRootViewController(animated: false)
         
         AuthManager.shared.signOut()
 
@@ -53,7 +50,6 @@ class SettingViewController: UIViewController {
     deinit {
         print("**DEINIT: ", String(describing: self.description))
     }
-    
-
-
 }
+
+

@@ -35,7 +35,7 @@ class GuestsListViewController: UIViewController {
         //TODO: Activity indicator
         DBManager.shared.getGuests { (results, error) in
             guard let results = results else { return }
-            let guests = results.documents.map {Guest(data: $0.data())}
+            let guests = results.documents.map {Guest(data: $0.data())}.sorted {($0.date > $1.date)}
             self.listOfGuests = guests
             self.mainTableView.reloadData()
         }

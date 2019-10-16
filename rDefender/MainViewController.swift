@@ -46,12 +46,24 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("**INIT: ", String(describing: self.description))
+        
+        
         // Do any additional setup after loading the view.
         setupUI()
         setNavigationBar()
         setConstraintsForSmallScreens()
         //
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        moveToAuthIfNeeded()
+    }
+    
+    private func moveToAuthIfNeeded() {
+        if !AuthManager.shared.isCurrentUserExist() {
+            performSegue(withIdentifier: "fromMainVCtoAuthVC", sender: self)
+        }
     }
     
     fileprivate func setConstraintsForSmallScreens() {

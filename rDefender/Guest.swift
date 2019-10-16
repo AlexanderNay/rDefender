@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 enum TypeOfGuest: String {
     case person
@@ -69,7 +70,7 @@ struct Guest {
         self.name = data["name"] as? String
         self.carModel = data["carModel"] as? String
         self.carNumber = data["carNumber"] as? String
-        self.date = Date()
+        self.date = Date(timeIntervalSince1970: Double((data["date"] as? Timestamp)?.seconds ?? 0))
         self.typeOfGuest = TypeOfGuest.getTipeOfGuestFrom(data: data)
         self.iconOfGuest = (data["iconOfGuest"] as? String) ?? "❔"
         self.status = GuestStatus.getGuestStatus(data: data)

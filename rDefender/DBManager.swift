@@ -33,7 +33,8 @@ class DBManager {
             "carNumber" : guest.carNumber ?? "",
             "iconOfGuest" : guest.iconOfGuest,
             "typeOfGuest" : guest.typeOfGuest.rawValue,
-            "guestStatus" : guest.status.rawValue
+            "guestStatus" : guest.status.rawValue,
+            "date" : Date()
         ]) { error in
             if let error = error {
                 print("Error adding document: \(error)")
@@ -87,7 +88,7 @@ class DBManager {
     
     
     
-    
+    //Singletone
     private init() {}
     
 }

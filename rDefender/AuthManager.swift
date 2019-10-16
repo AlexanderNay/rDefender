@@ -89,6 +89,6 @@ class AuthManager {
     }
     
     
-    //
+    //Singletone
     private init() {}
 }

@@ -45,9 +45,7 @@ class RegistrationViewController: UIViewController {
 
     
     private func showTheMainScreen() {
-        splitViewController?.viewControllers = []
-        navigationController?.viewControllers = []
-        self.performSegue(withIdentifier: "fromRegistrationToMainView", sender: nil)
+        navigationController?.popToRootViewController(animated: true)
     }
 
 
